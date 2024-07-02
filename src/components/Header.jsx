@@ -75,7 +75,7 @@ const Header = () => {
   };
 
   return (
-    <section>
+    <section className="sticky top-0 left-0 right-6 z-50">
       <header className="container mx-auto px-5 flex justify-between py-4 items-center">
         <div>
           <img className="w-16" src={images.Logo} alt="logo" />
@@ -83,11 +83,14 @@ const Header = () => {
         <div className="lg:hidden z-50">
           {navIsVisible ? (
             <AiOutlineClose
-              className="h-6 w-6"
+              className="h-6 w-6 cursor-pointer"
               onClick={navVisibilityHandler}
             />
           ) : (
-            <AiOutlineMenu className="h-6 w-6" onClick={navVisibilityHandler} />
+            <AiOutlineMenu
+              className="h-6 w-6 cursor-pointer"
+              onClick={navVisibilityHandler}
+            />
           )}
         </div>
         <div
